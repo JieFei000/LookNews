@@ -1,0 +1,42 @@
+<!--pages/smile/smile.wxml-->
+<view class="all">
+	<van-tabs animated>
+		<van-tab title="文本笑话">
+			<view class="box">
+				<view class="zw">
+					<view class="lists" wx:for="{{texts}}" wx:key="index">
+						<van-divider contentPosition="left" customStyle="color: #000; border-color: #ccc; font-size: 5vw; letter-spacing:1vw; margin:10vw 0;padding:0 3vw; line-hight:7vw">{{item.title}}</van-divider>
+						<view class="content">
+							<rich-text nodes="{{item.content}}"></rich-text>
+						</view>
+						<van-divider contentPosition="right" fontSize="3vw">{{item.date}}</van-divider>
+					</view>
+				</view>
+				<view class="more">
+					<van-button round type="info" color="red" bindtap="more">加载更多</van-button>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="图片笑话">
+			<view class="box">
+				<view class="zw">
+					<view class="lists" wx:for="{{imgs}}" wx:key="index">
+						<van-divider contentPosition="left" customStyle="color: #000; border-color: #ccc; font-size: 5vw; letter-spacing:1vw; margin:10vw 0; padding:0 3vw; line-hight:7vw">
+							<view class="title">
+								<rich-text nodes="{{item.title}}"></rich-text>
+							</view>
+						</van-divider>
+						<image src="https://images.weserv.nl/?url={{item.img}}" class="img" mode="widthFix"></image>
+						<van-divider contentPosition="right" fontSize="3vw">{{item.ct}}</van-divider>
+					</view>
+				</view>
+				<view class="more">
+					<van-button round type="info" color="red" bindtap="more2">加载更多</van-button>
+				</view>
+			</view>
+		</van-tab>
+	</van-tabs>
+	<view class="toTop" wx:if="{{show}}" bindtap="toTop">
+		<van-icon name="upgrade" />
+	</view>
+</view>

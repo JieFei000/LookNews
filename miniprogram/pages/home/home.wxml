@@ -1,0 +1,14 @@
+<!--pages/home/home.wxml-->
+<view class="nav">
+	<text class="nav_list {{color==index?'color':''}}" wx:for="{{result}}" wx:key="index" bindtap="change" data-index="{{index}}" data-item="{{item}}">{{item}}</text>
+</view>
+<swiper autoplay='true' interval='3000' circular='true' indicator-active-color="red" class="swiper">
+	<swiper-item wx:for="{{lists}}" wx:key="index" bindtap="jump" data-title="{{item}}" data-types="头条">
+		<image src="{{item.pic}}" class="img"></image>
+		<text class="title">{{item.title}}</text>
+	</swiper-item>
+</swiper>
+<lists num="{{num}}" types="{{types}}"></lists>
+	<view class="toTop" wx:if="{{show}}" bindtap="toTop">
+		<van-icon name="upgrade" />
+	</view>

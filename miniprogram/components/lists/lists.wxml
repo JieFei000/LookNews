@@ -1,0 +1,21 @@
+<!--components/lists/lists.wxml-->
+<view class="lists">
+	<view class="list" wx:for="{{lists}}" wx:key="index">
+		<view wx:if="{{(index+1)%7!=0}}" bindtap="jump" data-title="{{item}}" data-types="{{types1}}">
+			<view class="list_left" wx:if="{{(index+1)%7!=0}}">
+				<view class="title">{{item.title}}</view>
+				<view class="from" wx:if="{{(index+1)%7!=0}}">{{item.src}}</view>
+			</view>
+			<view class="list_right">
+				<image src="{{item.pic}}" class="list_img"></image>
+				<view class="list_bottom" wx:if="{{(index+1)%7==0}}">{{item.title}}</view>
+			</view>
+		</view>
+		<view class="list" wx:if="{{(index+1)%7==0}}" bindtap="jump" data-title="{{item}}" data-types="{{types1}}">
+			<view class="list_top">
+				<image src="{{item.pic}}" class="list_7_img"></image>
+			</view>
+			<view class="list_bottom">{{item.title}}</view>
+		</view>
+	</view>
+</view>

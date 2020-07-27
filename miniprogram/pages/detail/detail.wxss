@@ -1,0 +1,84 @@
+/* pages/detail/detail.wxss */
+.img{
+  width: 100vw;
+}
+.all{
+  background-color: #fff;
+}
+.title{
+  font-size: 6vw;
+  font-weight: bolder;
+  margin: 5vw 3vw;
+}
+.min_h{
+  min-height: 100vh;
+}
+.content_wrap{
+  width: 100vw;
+  padding: 0 3vw;
+  box-sizing: border-box;
+  font-size: 4vw;
+}
+.art_p{
+  text-indent:8vw;
+  line-height: 7vw;
+  margin-top: 3vw;
+  overflow: hidden
+}
+.share{
+  text-align: center;
+  margin: 5vw 0;
+  border: 1rpx solid #ccc;
+}
+.from,.time{
+  padding:0 3vw;
+  line-height: 7vw;
+  color: #999;
+  font-size: 3.5vw;
+}
+.share_img{
+  margin: 10vw 3vw;
+  width: 15vw;
+  height: 15vw;
+}
+.more{
+  background-color: #fff;
+}
+.more_list{
+  width: 50vw;
+  float: left;
+}
+.more_title{
+  font-size: 4vw;
+  line-height: 5vw;
+  height: 10vw;
+  font-weight: bolder;
+  overflow: hidden;
+  padding: 0 3vw;
+  letter-spacing: 1vw;
+  box-sizing: border-box;
+  margin-bottom: 5vw;
+}
+
+.more_img{
+  width: 50vw;
+  height: 33vw;
+}
+.h2_img{
+  width: 7vw;
+  height: 7vw;
+  vertical-align: middle;
+}
+.h2{
+  vertical-align: middle;
+  font-size: 5vw;
+  font-weight: bolder;
+  padding-left: 3vw;
+  padding-bottom: 5vw;
+}
+.richImg{
+  width: 100% !important;
+}
+
+
+

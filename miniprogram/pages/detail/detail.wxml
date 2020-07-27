@@ -1,0 +1,26 @@
+<view class="all">
+	<view class="min_h">
+		<image class="img" src="{{detail.pic}}"></image>
+		<view class="title">{{detail.title}}</view>
+		<view class="from">{{detail.src}}</view>
+		<view class="time">{{detail.time}}</view>
+		<view class="content_wrap">
+			<rich-text nodes="{{detail.content}}"></rich-text>
+		</view>
+	</view>
+	<view class="share">
+		<image src="../../images/wb.png" class="share_img"></image>
+		<image src="../../images/wx.png" class="share_img share_img_2"></image>
+		<image src="../../images/qq.png" class="share_img"></image>
+	</view>
+	<view class="more">
+		<view class="h2">
+			<image class="h2_img" src="../../images/logo_2.png"></image>
+			热门推荐
+		</view>
+		<view class="more_list" wx:for="{{lists}}" wx:key="index" bindtap="jump" data-title="{{item}}" data-types="头条">
+			<image src="{{item.pic}}" class="more_img"></image>
+			<view class="more_title">{{item.title}}</view>
+		</view>
+	</view>
+</view>
